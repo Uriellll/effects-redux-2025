@@ -1,0 +1,10 @@
+<div style="display: flex; flex-wrap:wrap; justify-content: space-between">
+    <div class="card my-3" style="width: 18rem;" *ngFor="let item of listUsers">
+        <img [src]="item.avatar" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{item.first_name}} {{item.last_name}}</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+</div>
