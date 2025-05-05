@@ -1,1 +1,22 @@
-<p>user works!</p>
+<div class="alert alert-info" role="alert" *ngIf="loading">
+    <h4 class="alert-heading">Cargando...</h4>
+    <i class="fa fa-spin fa-sync"></i>
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="error">
+    <h4 class="alert-heading">Error</h4>
+    <pre>{{error | json}}</pre>
+  </div>
+<div class="card mb-3" *ngIf="user">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img [src]="user.avatar" class="img-fluid rounded-start" [alt]="user.first_name">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{user.first_name}} {{user.last_name}}</h5>
+          <p class="card-text">{{user.email}} </p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
